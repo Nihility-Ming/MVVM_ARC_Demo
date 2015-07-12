@@ -23,6 +23,7 @@ values**.
 List
 ----
 <table width="100%">
+    <caption>Demo Of All Index</caption>
     <tr>
         <th>Name</th>
         <th>Description</th>
