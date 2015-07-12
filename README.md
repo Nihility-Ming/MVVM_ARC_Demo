@@ -5,17 +5,36 @@ I writing some MVVM and ARC demo. Very conducive to learning.
 
 ---
 
+What's MVVM?
+-----------
+
+Model View ViewModel (MVVM) is an architectural pattern for software development.
+MVVM is a variation of Martin Fowler's Presentation Model design pattern. Like Fowler's Presentation Model, MVVM abstracts a view's state and behavior. However, whereas the Presentation Model abstracts a view (i.e., creates a view model) in a manner that does not depend on a specific user-interface platform, MVVM was developed at Microsoft specifically to simplify event-driven programming of user interfaces—by exploiting features of Windows Presentation Foundation (WPF) (Microsoft's .NET graphics system) and Silverlight (WPF's Internet application derivative).
+[more info.](https://en.wikipedia.org/wiki/Model_View_ViewModel#Components_of_the_MVVM_pattern)
+
+What's ARC(ReactiveCocoa)?
+--------------------------
+
+ReactiveCocoa (RAC) is an Objective-C framework inspired by [Functional Reactive
+Programming][]. It provides APIs for **composing and transforming streams of
+values**.
+
+If you're already familiar with functional reactive programming or know the basic
+premise of ReactiveCocoa, check out the [Documentation][] folder for a framework
+overview and more in-depth information about how it all works in practice.
+[more info.](https://github.com/ReactiveCocoa/ReactiveCocoa)
+
 List
 ----
 
-1. [Demo 01](#Demo-01). An easy Demo of Hellow Wrold level.
+1. [Demo 01](#demo-01). An easy Demo of Hellow Wrold level.
 
 Contents
 ----------
 
 ###Demo 01
 
-![Demo_01](Demo_01/screenshot.gif " Demo_01")
+![Demo_01](Demo_01/screenshot.gif "Demo_01")
 
 
 `ViewControler.m`
