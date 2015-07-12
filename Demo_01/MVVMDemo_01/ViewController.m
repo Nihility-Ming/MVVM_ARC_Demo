@@ -1,16 +1,15 @@
-MVVM ARC Demo
-============
+//
+//  ViewController.m
+//  MVVMDemo_01
+//
+//  Created by 伟明 毕 on 15/7/12.
+//  Copyright (c) 2015年 Bi Weiming. All rights reserved.
+//
 
-	I writing some MVVM and ARC demo. Very conducive to learning.
+#import "ViewController.h"
+#import "ViewModel.h"
+#import <ReactiveCocoa.h>
 
-Contents
-----------
-
-##### Demo_01
-
-![Demo_01](Demo_01/screenshot.gif " Demo_01")
-
-```Objective-C
 @interface ViewController () {
     ViewModel *_viewModel;
 }
@@ -35,10 +34,5 @@ Contents
     RAC(self.resultLabel, text) = RACObserve(_viewModel, resultString);
 }
 
+
 @end
-```
-
-License
-----------------
-
-Licensed under [MIT](LICENSE) 'cause why not. 
