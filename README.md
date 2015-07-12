@@ -28,7 +28,7 @@ List
         <th>Description</th>
     </tr>
     <tr>
-        <td>[Demo 01](#demo-01)</td>
+        <td><a href="#Demo-01">Demo 01</a></td>
         <td>An easy Demo of Hellow Wrold level.</td>
     </tr>
 </table>
