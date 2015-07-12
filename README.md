@@ -3,6 +3,8 @@ MVVM ARC Demo
 
 I writing some MVVM and ARC demo. Very conducive to learning.
 
+---
+
 List
 ----
 
@@ -68,9 +70,14 @@ RAC(self.resultLabel, text) = RACObserve(_viewModel, resultString);
 Components
 ----------
 
-* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa). ReactiveCocoa (RAC) is an Objective-C framework inspired by Functional Reactive Programming.
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa): ReactiveCocoa (RAC) is an Objective-C framework inspired by Functional Reactive Programming.
+
+Feedback
+--------
+
+We'd love to hear feedback on the library. Create Github issues, or call my phone `15918550637`.
 
 License
 ----------------
 
-`MVVM ARC Demo` is available under the MIT license. See the LICENSE file for [more info](LICENSE).
+**MVVM ARC Demo** is available under the MIT license. See the LICENSE file for [more info](LICENSE).
