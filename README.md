@@ -10,52 +10,17 @@ Contents
 
 ![Demo_01](Demo_01/screenshot.gif " Demo_01")
 
-ViewControler.h
+
+`ViewControler.m`
 ```Objective-C
-@interface ViewController () {
-    ViewModel *_viewModel;
-}
-
-@property (strong, nonatomic) IBOutlet UITextField *leftOperandTF;      // 左操作数TextField
-@property (strong, nonatomic) IBOutlet UITextField *rightOperandTF;     // 右操作数TextField
-@property (strong, nonatomic) IBOutlet UISegmentedControl *operationSC; // 操作符SegmentedControl
-@property (strong, nonatomic) IBOutlet UILabel *resultLabel;            // 显示结果的Label
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    _viewModel = [[ViewModel alloc] init];
-    
-    RAC(_viewModel, leftOperandValue) = self.leftOperandTF.rac_textSignal;
-    RAC(_viewModel, rightOperandValue) = self.rightOperandTF.rac_textSignal;
-    RAC(_viewModel, basicOperator) = [self.operationSC rac_newSelectedSegmentIndexChannelWithNilValue:@0];
-    RAC(self.resultLabel, text) = RACObserve(_viewModel, resultString);
-}
-
-@end
+RAC(_viewModel, leftOperandValue) = self.leftOperandTF.rac_textSignal;
+RAC(_viewModel, rightOperandValue) = self.rightOperandTF.rac_textSignal;
+RAC(_viewModel, basicOperator) = [self.operationSC rac_newSelectedSegmentIndexChannelWithNilValue:@0];
+RAC(self.resultLabel, text) = RACObserve(_viewModel, resultString);
 ```
 
-ViewModel.h
+`ViewModel.m`
 ```Objective-C
-@interface ViewModel() {
-    
-}
-
-@property (strong, nonatomic, readwrite) NSString *leftOperandValue;
-@property (strong, nonatomic, readwrite) NSString *rightOperandValue;
-@property (assign, nonatomic, readwrite) BasicOperator basicOperator;
-@property (strong, nonatomic, readwrite) NSString *resultString;
-@property (strong, nonatomic, readwrite) RACCommand *calculateCommand;
-
-@end
-
-@implementation ViewModel
-
-
 - (instancetype)init {
     if (self = [super init]) {
         @weakify(self);
@@ -93,11 +58,15 @@ ViewModel.h
     
     return self.resultString;
 }
-
-@end
 ```
+
+Components
+----------
+
+* (ReactiveCocoa)[https://github.com/ReactiveCocoa/ReactiveCocoa]
+ReactiveCocoa (RAC) is an Objective-C framework inspired by Functional Reactive Programming.
 
 License
 ----------------
 
-Licensed under [MIT](LICENSE) 'cause why not. 
+`MVVM ARC DEMO` is available under the MIT license. See the LICENSE file for [more info](LICENSE).
