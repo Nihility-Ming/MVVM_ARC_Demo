@@ -20,10 +20,9 @@ Programming][]. It provides APIs for **composing and transforming streams of
 values**.
 [more info.](https://github.com/ReactiveCocoa/ReactiveCocoa)
 
-List
-----
+Demo Index
+----------
 <table width="100%">
-    <caption>Demo Of All Index</caption>
     <tr>
         <th>Name</th>
         <th>Description</th>
