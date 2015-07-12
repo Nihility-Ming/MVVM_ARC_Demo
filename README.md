@@ -8,17 +8,17 @@ I writing some MVVM and ARC demo. Very conducive to learning.
 What's MVVM?
 -----------
 
-Model View ViewModel (MVVM) is an architectural pattern for software development.
-MVVM is a variation of Martin Fowler's Presentation Model design pattern. Like Fowler's Presentation Model, MVVM abstracts a view's state and behavior. However, whereas the Presentation Model abstracts a view (i.e., creates a view model) in a manner that does not depend on a specific user-interface platform, MVVM was developed at Microsoft specifically to simplify event-driven programming of user interfaces—by exploiting features of Windows Presentation Foundation (WPF) (Microsoft's .NET graphics system) and Silverlight (WPF's Internet application derivative).
-[more info.](https://en.wikipedia.org/wiki/Model_View_ViewModel#Components_of_the_MVVM_pattern)
+> Model View ViewModel (MVVM) is an architectural pattern for software development.
+> MVVM is a variation of Martin Fowler's Presentation Model design pattern. Like Fowler's Presentation Model, MVVM abstracts a view's state and behavior. However, whereas the Presentation Model abstracts a view (i.e., creates a view model) in a manner that does not depend on a specific user-interface platform, MVVM was developed at Microsoft specifically to simplify event-driven programming of user interfaces—by exploiting features of Windows Presentation Foundation (WPF) (Microsoft's .NET graphics system) and Silverlight (WPF's Internet application derivative).
+> [more info.](https://en.wikipedia.org/wiki/Model_View_ViewModel#Components_of_the_MVVM_pattern)
 
 What's ARC(ReactiveCocoa)?
 --------------------------
 
-ReactiveCocoa (RAC) is an Objective-C framework inspired by [Functional Reactive
-Programming][]. It provides APIs for **composing and transforming streams of
+> ReactiveCocoa (RAC) is an Objective-C framework inspired by Functional Reactive
+Programming. It provides APIs for **composing and transforming streams of
 values**.
-[more info.](https://github.com/ReactiveCocoa/ReactiveCocoa)
+> [more info.](https://github.com/ReactiveCocoa/ReactiveCocoa)
 
 Demo Index
 ----------
