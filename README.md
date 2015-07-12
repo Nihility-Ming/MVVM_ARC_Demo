@@ -22,13 +22,13 @@ values**.
 
 List
 ----
-<table>
+<table width="100%">
     <tr>
         <th>Name</th>
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="#Demo-01">Demo 01</a></td>
+        <td><a href="#demo-01">Demo 01</a></td>
         <td>An easy Demo of Hellow Wrold level.</td>
     </tr>
 </table>
