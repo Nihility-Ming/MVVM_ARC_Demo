@@ -90,7 +90,7 @@ Components
 Feedback
 --------
 
-We'd love to hear feedback on the library. Create Github issues, or call my phone `15918550637`.
+I'd love to hear feedback on the library. Create Github issues, or call my phone `+8615918550637`.
 
 License
 ----------------
