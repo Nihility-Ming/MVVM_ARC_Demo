@@ -20,16 +20,23 @@ Programming. It provides APIs for **composing and transforming streams of
 values**.
 > [more info.](https://github.com/ReactiveCocoa/ReactiveCocoa)
 
-Demo Index
+Demo Indexs
 ----------
 <table width="100%">
     <tr>
         <th>Name</th>
         <th>Description</th>
+        <th>Level</th>
     </tr>
     <tr>
         <td><a href="#demo-01">Demo 01</a></td>
-        <td>An easy Demo of Hellow Wrold level.</td>
+        <td>An easy level Demo, showing a response calculator.</td>
+        <td>★☆☆☆☆</td>
+    </tr>
+    <tr>
+        <td><a href="#demo-02">Demo 02</a></td>
+        <td>This Demo shows how to use MVVM and RAC building with a refreshing and loads more features of the TableView.</td>
+        <td>★★★☆☆</td>
     </tr>
 </table>
 
@@ -88,6 +95,48 @@ RAC(self.resultLabel, text) = RACObserve(_viewModel, resultString);
     
     return self.resultString;
 }
+```
+
+###Demo 02
+
+![Demo_02](Demo_01/screenshot.gif "Demo_02")
+
+`ViewController.Swift`
+```Swift
+private func bindData() {
+        
+        RACObserve(self.viewModel, "needRefreshTableView").ignore(false).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext { (needRefreshTableView:AnyObject!) -> Void in
+            self.tableView.reloadData()
+        }
+        
+        RACObserve(self.viewModel, "isNoMoreData").ignore(false).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext { (isNoMoreData:AnyObject!) -> Void in
+            self.tableView.footer.noticeNoMoreData()
+        }
+        
+        RACObserve(self.viewModel, "isError").ignore(false).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext { (isError:AnyObject!) -> Void in
+            BWMMBProgressHUD.showTitle(kBWMMBProgressHUDLoadErrorMsg, toView: self.view, hideAfter: kBWMMBProgressHUDHideTimeInterval, msgType: .Error)
+        }
+        
+        RACObserve(self.viewModel, "isEndRefreshing").ignore(false).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext { (isError:AnyObject!) -> Void in
+            self.tableView.footer.hidden = false
+            self.tableView.header.endRefreshing()
+            self.tableView.footer.endRefreshing()
+        }
+        
+        RACObserve(self.viewModel, "isChangePrompt").ignore(false).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext { (isChangePrompt:AnyObject!) -> Void in
+            self.navigationItem.prompt = self.viewModel.prompt
+        }
+        
+    }
+```
+
+`ViewModel.swift`
+```Swift
+    dynamic var needRefreshTableView:Bool = false
+    dynamic var isNoMoreData:Bool = false
+    dynamic var isError = false
+    dynamic var isEndRefreshing = false
+    dynamic var isChangePrompt = false
 ```
 
 Components
